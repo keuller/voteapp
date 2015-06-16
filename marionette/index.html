@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vote Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" charset="utf-8">
+    <link rel="stylesheet" href="styles.css" chrset="utf-8">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/babel/5.5.6/browser.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script type="text/template" id="AppTemplate">
+    <header class="container well">
+        <div class="col-md-12">
+            <h2>Marionette Vote App</h2>
+        </div>
+    </header>
+    <section class="container">
+        <div class="row">
+            <div id="content"></div>
+        </div>
+    </section>
+    </script>
+
+    <script src="text/template" id="VoteItemTemplate">
+    <%= description %>
+    <div>
+        <button class="btn btn-success increment">+1</button>&nbsp;
+        <button class="btn btn-danger decrement">-1</button>&nbsp;
+        <span><%= count %></span>
+    </div>
+    </script>
+
+    <script src="../data/votes.js" charset="utf-8"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.min.js" charset="utf-8"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min.js" charset="utf-8"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.marionette/2.4.1/backbone.marionette.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="app.js" type="text/ecmascript-6" charset="utf-8"></script>
+</body>
+</html>

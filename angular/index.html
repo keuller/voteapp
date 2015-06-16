@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Vote</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" charset="utf-8">
+    <link rel="stylesheet" href="styles.css" chrset="utf-8">
+    <script src="http://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+</head>
+<body ng-app="VoteApp">
+    <header class="container well">
+        <div class="col-md-12">
+            <h2 class="title">Angular Vote App</h2>
+        </div>
+    </header>
+    <section class="container">
+        <div class="row">
+            <div id="app">
+                <ul id="itens" ng-controller="VoteCtrl as ctrl">
+                    <li ng-repeat="vote in ctrl.votes">
+                        {{vote.description}}
+                        <div>
+                            <button data-id="{{vote.id}}" ng-click="ctrl.doIncrement(vote)" class="btn btn-success increment">+1</button>&nbsp;
+                            <button data-id="{{vote.id}}" ng-click="ctrl.doDecrement(vote)" class="btn btn-danger decrement">-1</button>&nbsp;
+                            <span>{{vote.count}}</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="../data/votes.js" charset="utf-8"></script>
+    <script src="http://cdn.jsdelivr.net/angularjs/1.4.0/angular.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+ul#itens { list-style-type: none; margin:0;padding:0; }
+ul#itens { border-left:1px solid #996633; border-right:1px solid #996633; }
+
+li { font-size:1.5em; padding:7px 7px 10px 15px; background-color: #ffe; border-bottom:2px solid #996633; }
+li:first-child { border-top:2px solid #996633; }
+li:hover { background-color: #cc9; }
+li span { font-weight:bold; display:inline-block; color: blue; }
+.title { color:#E1563F; }

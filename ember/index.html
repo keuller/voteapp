@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ember Vote</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" charset="utf-8">
+    <link rel="stylesheet" href="styles.css" chrset="utf-8">
+    <script src="http://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/babel/5.5.6/browser.js" charset="utf-8"></script>
+</head>
+<body>
+    <script type="text/x-handlebars" id="application">
+    <header class="container well">
+        <div class="col-md-12">
+            <h2 class="title">Ember Vote App</h2>
+        </div>
+    </header>
+    {{outlet}}
+    </script>
+
+    <script type="text/x-handlebars" id="index">
+    <section class="container">
+        <div class="row">
+            <ul id="itens">
+                {{#each content key="@guid" as |vote|}}
+                <li>
+                    {{vote.description}}
+                    <div>
+                        <button class="btn btn-success" {{action 'doIncrement' vote}}>+1</button>&nbsp;
+                        <button class="btn btn-danger" {{action 'doDecrement' vote}}>-1</button>&nbsp;
+                        <span>{{vote.count}}</span>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+    </script>
+
+    <script src="../data/votes.js" charset="utf-8"></script>
+    <script src="http://builds.emberjs.com/release/ember-template-compiler.js"></script>
+    <script src="http://cdn.jsdelivr.net/emberjs/1.13.0/ember.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="app.js" type="text/ecmascript-6" charset="utf-8"></script>
+</body>
+</html>
