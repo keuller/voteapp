@@ -6,3 +6,5 @@ li:first-child { border-top:2px solid #996633; }
 li:hover { background-color: #cc9; }
 li span { font-weight:bold; display:inline-block; color: blue; }
 .title { color:blue; }
+
+footer > div { padding-top:15px; text-align:center; }

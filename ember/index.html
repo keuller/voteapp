@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Ember Vote</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" charset="utf-8">
-    <link rel="stylesheet" href="styles.css" chrset="utf-8">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.min.css" charset="utf-8">
+    <link rel="stylesheet" href="../assets/styles.css" chrset="utf-8">
     <script src="http://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://cdn.jsdelivr.net/babel/5.5.6/browser.js" charset="utf-8"></script>
 </head>
@@ -16,6 +16,9 @@
         </div>
     </header>
     {{outlet}}
+    <footer>
+        <div>All static assets are provided by <a href="http://www.jsdelivr.com" target="jSDelivr">jSDelivr</a> CDN.</div>
+    </footer>
     </script>
 
     <script type="text/x-handlebars" id="index">
@@ -37,10 +40,10 @@
     </section>
     </script>
 
-    <script src="../data/votes.js" charset="utf-8"></script>
+    <script src="../assets/votes.js" charset="utf-8"></script>
     <script src="http://builds.emberjs.com/release/ember-template-compiler.js"></script>
     <script src="http://cdn.jsdelivr.net/emberjs/1.13.0/ember.min.js" charset="utf-8"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
     <script src="app.js" type="text/ecmascript-6" charset="utf-8"></script>
 </body>
 </html>
