@@ -1,0 +1,44 @@
+<link rel="import" href="../vendor/polymer.html" charset="utf-8">
+
+<dom-module id="vote-list">
+    <template>
+        <ul id="itens">
+            <template is="dom-repeat" sort="doSort" items="{{votes}}" as="vote" observe="count vote.count">
+                <li>
+                    <span>{{vote.description}}</span>
+                    <div>
+                        <button on-click="increment" class="btn btn-success">+1</button>&#160;
+                        <button on-click="decrement" class="btn btn-danger">-1</button>&#160;
+                        <span>{{vote.count}}</span>
+                    </div>
+                </li>
+            </template>
+        </ul>
+    </template>
+    <script>
+    (function () {
+        Polymer({
+            is: 'vote-list',
+            properties: {
+                votes: { type: Array, notify: true }
+            },
+            ready: function() {
+                this.votes = data;
+            },
+            doSort: function(v1, v2) {
+                return (v2.count - v1.count);
+            },
+            increment: function(e) {
+                var model = e.model;
+                model.set('vote.count', model.vote.count + 1);
+            },
+            decrement: function(e) {
+                var model = e.model;
+                if (model.vote.count > 0) {
+                    e.model.set('vote.count', model.vote.count - 1);
+                }
+            }
+        });
+    })();
+    </script>
+</dom-module>
